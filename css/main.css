@@ -718,7 +718,7 @@ footer .box .second__section__footer .phone__number::before {
   position: absolute;
   left: -28px;
   bottom: 0px;
-  background-image: url("/images/icon-phone.svg");
+  background-image: url("../images/icon-phone.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 70%;

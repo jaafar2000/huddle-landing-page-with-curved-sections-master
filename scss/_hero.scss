@@ -1,0 +1,102 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  & .p__one {
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 25px;
+    color: $VeryDarkCyan;
+    font-family: "Poppins", sans-serif;
+    @include breakpoint-up(medium) {
+      font-weight: bolder;
+      font-size: 30px;
+    }
+  }
+  & .p__two {
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.6;
+    color: $VeryDarkCyan;
+    font-weight: 600;
+    margin-bottom: 50px;
+    @include breakpoint-up(medium) {
+      width: 40%;
+    }
+  }
+  &  a {
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: $VeryPaleBlue;
+    background-color: $Pink;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: -1px 1px 7px 0px #adafbf;
+    margin-bottom: 100px;
+    &:hover {
+      background-color: $LightPink;
+    }
+    @include breakpoint-up(medium) {
+      font-size: 15px;
+      padding: 15px 50px;
+    }
+  }
+  & .screen-mockups {
+    width: 100%;
+    height: 233px;
+    background-image: url("../images/screen-mockups.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 147px;
+    @include breakpoint-up(medium) {
+      width: 85%;
+      height: 700px;
+      font-family: "Poppins", sans-serif;
+    }
+  }
+  & .the__keys {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @include breakpoint-up(medium) {
+    margin-bottom: 70px;
+    }
+    @include breakpoint-up(medium) {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 70%;
+    }
+    & .keys {
+      & p:first-child {
+        color: $VeryDarkCyan;
+        font-weight: 700;
+        font-size: 60px;
+        position: relative;
+        @include breakpoint-up(medium) {
+          font-family: "Poppins", sans-serif;
+          font-size: 65px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          background-image: url("../images/icon-communities.svg");
+          background-repeat: no-repeat;
+          background-size: 100%;
+          top: -27px;
+          left: 0px;
+        }
+      }
+      & p:last-child {
+        color: $VeryDarkCyan;
+        text-align: center;
+        margin-bottom: 110px;
+      }
+    }
+  }
+}

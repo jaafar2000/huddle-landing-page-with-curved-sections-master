@@ -1,0 +1,33 @@
+*,*::after ,*::before{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0%;
+}
+ul {
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+body{
+	font-family: 'Poppins', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+.container{
+	margin-left: 25px;
+	margin-right: 25px;
+	@include breakpoint-up(medium){
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+}
+
+.f__aic__jcc__c{
+	display: flex;
+	align-items: center;
+	justify-self:center;
+	flex-direction: column;
+}

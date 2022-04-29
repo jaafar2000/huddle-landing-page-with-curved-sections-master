@@ -1,0 +1,203 @@
+footer {
+  background-color: $VeryDarkCyan;
+  color: $VeryPaleBlue;
+  padding-bottom: 40px;
+  position: relative;
+  & .inner__box {
+    @include breakpoint-up(medium) {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      flex-direction: row;
+    }
+  }
+  &::before {
+    content: "";
+    min-width: 100%;
+    min-height: 53px;
+    position: absolute;
+    top: -53px;
+    left: 0;
+    background-image: url("../images/bg-footer-top-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    @include breakpoint-up(medium) {
+      background-image: url("../images/bg-footer-top-desktop.svg");
+      min-height: 145px;
+      top: -143px;
+    }
+  }
+  & .box {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+    @include breakpoint-up(medium) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 20px;
+    }
+
+    & .first__section__footer {
+      margin-bottom: 50px;
+      @include breakpoint-up(medium) {
+        order: 2;
+        flex-grow: 2;
+      }
+      & .footer__newsletter {
+        font-weight: 600;
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+      }
+
+      & .to__recive__tips {
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        @include breakpoint-up(medium) {
+          font-size: 12px;
+          width: 60%;
+        }
+      }
+
+      & .input {
+        width: 100%;
+        border-radius: 7px;
+        height: 45px;
+        border: none;
+        margin-bottom: 15px;
+        &:focus {
+          border: none;
+        }
+        @include breakpoint-up(medium) {
+          width: 50%;
+          margin-bottom: 0px;
+          height: 40px;
+        }
+      }
+      & a {
+        display: block;
+        color: $VeryPaleBlue;
+        background-color: $Pink;
+        width: 50%;
+        margin-left: 50%;
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 45px;
+        box-shadow: 0 0 0 0 ;
+        &:hover {
+          background-color: $LightPink;
+        }
+        @include breakpoint-up(medium) {
+          margin-left: 10px;
+          margin-right: 0px;
+          margin-bottom: 0 !important;
+          width: 30%;
+          text-align: center;
+        }
+      }
+    }
+
+    & .second__section__footer {
+      @include breakpoint-up(medium) {
+        width: 50%;
+      }
+      & .footer__logo {
+        background-image: url("../images/Screenshot_1.png");
+        background-repeat: no-repeat;
+        width: 50%;
+        height: 28px;
+        background-size: 100%;
+        margin-bottom: 20px;
+        @include breakpoint-up(medium) {
+          width: 24%;
+          margin-top: 30px;
+        }
+      }
+      & .lorem {
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+        @include breakpoint-up(medium) {
+          font-size: 12px;
+          width: 60%;
+        }
+      }
+      & .phone__number {
+        margin-left: 20px;
+        position: relative;
+        margin-bottom: 20px;
+        @include breakpoint-up(medium) {
+          font-size: 12px;
+        }
+        &::before {
+          content: "";
+          width: 25px;
+          height: 25px;
+          position: absolute;
+          left: -28px;
+          bottom: 0px;
+          background-image: url("/images/icon-phone.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 70%;
+          @include breakpoint-up(medium) {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+      & .email {
+        margin-left: 20px;
+        position: relative;
+        margin-bottom: 40px;
+        @include breakpoint-up(medium) {
+          font-size: 12px;
+        }
+        &::before {
+          content: "";
+          width: 25px;
+          height: 25px;
+          position: absolute;
+          left: -28px;
+          bottom: 0px;
+          background-image: url("../images/icon-email.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 70%;
+          @include breakpoint-up(medium) {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+  & .social {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: row;
+
+    & .social__icon {
+      width: 35px;
+      height: 35px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 70%;
+      margin-right: 20px;
+    }
+    & .facebook {
+      background-image: url("../images/social/icon-facebook.svg");
+    }
+    & .instgram {
+      background-image: url("../images/social/icon-instagram.svg");
+    }
+    & .twitter {
+      background-image: url("../images/social/icon-twitter.svg");
+    }
+  }
+}

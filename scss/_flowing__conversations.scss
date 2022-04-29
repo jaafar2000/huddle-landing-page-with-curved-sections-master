@@ -1,0 +1,47 @@
+.flowing__conversations {
+  position: relative;
+  padding: 200px 0px 60px;
+
+  & .container {
+    @include breakpoint-up(medium) {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+  & .flowing__conversations__img {
+    width: 80%;
+    min-height: 227px;
+    background-image: url("../images/illustration-flowing-conversation.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 64px;
+    @include breakpoint-up(medium) {
+      height: 400px;
+    }
+  }
+  & .info {
+    & p:first-child {
+      text-align: center;
+      font-weight: 700;
+      color: $VeryDarkCyan;
+      font-size: 20px;
+      margin-bottom: 15px;
+      font-family: "Poppins", sans-serif;
+      // @include breakpoint-up(medium){
+      // 	width: 70%;
+      // }
+    }
+    & p:last-child {
+      text-align: center;
+      color: $VeryDarkCyan;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.4;
+      // @include breakpoint-up(medium){
+      // 	width: 70%;
+      // }
+    }
+  }
+}

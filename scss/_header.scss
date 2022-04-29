@@ -1,0 +1,38 @@
+header {
+  margin-bottom: 100px;
+  & nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 13px;
+    & .logo {
+      width: 100px;
+      height: 50px;
+      background-image: url("../images/logo.svg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: -50%;
+      @include breakpoint-up(medium) {
+      width: 150px;
+      height: 75px;
+      }
+    }
+    & .button {
+      & a {
+        border: 1px solid $LightPink;
+        color: $LightPink;
+        text-align: center;
+        font-size: 11px;
+        padding: 6px 10px;
+        border-radius: 30px;
+        font-family: "Poppins", sans-serif;
+        @include breakpoint-up(medium) {
+          font-size: 15px;
+          padding: 8px 18px;
+          border-radius: 30px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.grow__together {
+
+  position: relative;
+  background-color: #f6fbff;
+  padding: 100px 0px 60px;
+  @include breakpoint-up(medium) {
+    padding: 60px 0;
+  }
+  & .container {
+    @include breakpoint-up(medium) {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100px;
+    background-image: url("../images/bg-section-top-mobile-1.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    left: 0px;
+    top: -100px;
+    position: absolute;
+    @include breakpoint-up(medium) {
+      background-image: url("../images/bg-section-top-desktop-1.svg");
+      height: 150px;
+      top: -150px;
+    }
+  }
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100px;
+    background-image: url("../images/bg-section-bottom-mobile-1.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    left: 0px;
+    bottom: -100px;
+    position: absolute;
+    @include breakpoint-up(medium) {
+      background-image: url("../images/bg-section-bottom-desktop-1.svg");
+      height: 150px;
+      bottom: -150px;
+    }
+  }
+  & .grow__together__img {
+    background-color: #f6fbff;
+    width: 80%;
+    height: 227px;
+    background-image: url("../images/illustration-grow-together.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 64px;
+    @include breakpoint-up(medium) {
+      order: 2;
+      height: 440px;
+    }
+  }
+  & .info {
+    & p:first-child {
+      text-align: center;
+      font-weight: 700;
+      color: $VeryDarkCyan;
+      font-size: 20px;
+      margin-bottom: 15px;
+      font-family: "Poppins", sans-serif;
+      @include breakpoint-up(medium) {
+        width: 70%;
+      }
+    }
+    & p:last-child {
+      text-align: center;
+      color: $VeryDarkCyan;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.4;
+      @include breakpoint-up(medium) {
+        width: 70%;
+      }
+    }
+  }
+}
